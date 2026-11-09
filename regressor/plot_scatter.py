@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Scatter plot con asse x = Exposure Mean (feature),
+Scatter plot con asse x = Exposure Mean (feature)
 asse y = Burden Mean (target) su un sottoinsieme casuale dei punti.
 
 Legge i CSV prodotti da preprocess_dataset.py (uno per inquinante) e disegna
