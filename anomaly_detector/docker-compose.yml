@@ -1,0 +1,21 @@
+services:
+
+  anomaly-detector:
+    build: .
+    container_name: anomaly_detector
+    environment:
+      - MQTT_BROKER=mqtt-broker
+      - MQTT_PORT=1883
+      - MQTT_USERNAME=${MQTT_BACKEND_SERVICE_USER}
+      - MQTT_PASSWORD=${MQTT_BACKEND_SERVICE_PASS}
+      - MQTT_TOPIC_INPUT=telemetry/air_quality
+      - MQTT_TOPIC_ANOMALY=telemetry/anomalies
+      - WARMUP_SAMPLES=20   # Bastano 20 messaggi per iniziare a rilevare
+      - Z_THRESHOLD=2.5     # Soglia di tolleranza
+    networks:
+      - iot-network
+    restart: unless-stopped
+
+networks:
+  iot-network:
+    external: true

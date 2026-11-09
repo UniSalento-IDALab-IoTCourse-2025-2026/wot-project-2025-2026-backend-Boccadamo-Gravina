@@ -1,0 +1,48 @@
+services:
+
+  mqtt-broker:
+    image: emqx/emqx:5.8.8
+    container_name: emqx_broker
+    ports:
+      - "1883:1883"     # Porta MQTT standard (senza TLS)
+      - "8083:8083"     # Porta WebSocket (per test da client dashboard)
+      - "18083:18083"   # Dashboard
+    environment:
+      - EMQX_DASHBOARD__DEFAULT_PASSWORD=${EMQX_ADMIN_PASS}
+      # Meccanismo di autenticazione password-based via file internal/built-in:
+      # - MQTT_EDGE_DEVICE_USER=${MQTT_EDGE_DEVICE_USER}
+      # - MQTT_EDGE_DEVICE_PASS=${MQTT_EDGE_DEVICE_PASS}
+      # - MQTT_BACKEND_SERVICE_USER=${MQTT_BACKEND_SERVICE_USER}
+      # - MQTT_BACKEND_SERVICE_PASS=${MQTT_BACKEND_SERVICE_PASS}
+      # - MQTT_SU_USER=${MQTT_SU_USER}
+      # - MQTT_SU_PASS=${MQTT_SU_PASS}
+      - EMQX_AUTHENTICATION__1__MECHANISM=password_based
+      - EMQX_AUTHENTICATION__1__BACKEND=built_in_database
+      - EMQX_AUTHENTICATION__1__ENABLE=true
+      # - EMQX_AUTHORIZATION__SOURCES__1__TYPE=file
+      # - EMQX_AUTHORIZATION__SOURCES__1__ENABLE=true
+      # - EMQX_AUTHORIZATION__SOURCES__1__PATH=/opt/emqx/etc/acl.conf
+    entrypoint: >
+      /bin/sh -c "
+      echo 'user_id,password,is_superuser' > /opt/emqx/etc/auth-built-in-db-bootstrap.csv &&
+      echo '${MQTT_EDGE_DEVICE_USER},${MQTT_EDGE_DEVICE_PASS},false' >> /opt/emqx/etc/auth-built-in-db-bootstrap.csv &&
+      echo '${MQTT_BACKEND_SERVICE_USER},${MQTT_BACKEND_SERVICE_PASS},false' >> /opt/emqx/etc/auth-built-in-db-bootstrap.csv &&
+      echo '${MQTT_SU_USER},${MQTT_SU_PASS},true' >> /opt/emqx/etc/auth-built-in-db-bootstrap.csv &&
+      /opt/emqx/bin/emqx foreground
+      "
+    volumes:
+      # - ./emqx.conf:/opt/emqx/etc/emqx.conf
+      - ./acl.conf:/opt/emqx/etc/acl.conf
+      - emqx-data:/opt/emqx/data
+      - emqx-log:/opt/emqx/log
+    networks:
+      - iot-network
+    restart: unless-stopped
+
+networks:
+  iot-network:
+    external: true
+
+volumes:
+  emqx-data:
+  emqx-log:
