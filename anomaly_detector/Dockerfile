@@ -8,9 +8,12 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY main.py .
+COPY src .
 
-RUN useradd -m appuser && chown -R appuser:appuser /app
+RUN mkdir -p /app/data && \
+    useradd -m appuser && \
+    chown -R appuser:appuser /app
+    
 USER appuser
 
 CMD ["python", "main.py"]

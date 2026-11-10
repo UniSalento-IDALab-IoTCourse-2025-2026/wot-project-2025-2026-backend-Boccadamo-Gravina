@@ -10,12 +10,19 @@ services:
       - MQTT_PASSWORD=${MQTT_BACKEND_SERVICE_PASS}
       - MQTT_TOPIC_INPUT=telemetry/air_quality
       - MQTT_TOPIC_ANOMALY=telemetry/anomalies
-      - WARMUP_SAMPLES=20   # Bastano 20 messaggi per iniziare a rilevare
-      - Z_THRESHOLD=2.5     # Soglia di tolleranza
+      - EWMA_ALPHA=0.1
+      - WARMUP_SAMPLES=15
+      - Z_THRESHOLD=2.5
+      - STATE_FILE_PATH=/app/data/state.json
+    volumes:
+      - anomaly_data:/app/data
     networks:
       - iot-network
-    restart: unless-stopped
+    restart: on-failure
 
 networks:
   iot-network:
     external: true
+
+volumes:
+  anomaly_data:
