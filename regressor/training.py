@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
-"""GAM a una feature (spline penalizzata, P-spline) con vincolo di monotonia opzionale.
+"""
+GAM a una feature (spline penalizzata, P-spline) con vincolo di monotonia opzionale.
 
 Modello, un'istanza per inquinante:   ln(1 + Burden Mean) = f(Exposure Mean)
 f e' una spline cubica in base B: f(x) = sum_k theta_k * B_k(x).
