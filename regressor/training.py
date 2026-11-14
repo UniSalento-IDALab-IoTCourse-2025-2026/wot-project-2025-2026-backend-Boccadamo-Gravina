@@ -14,7 +14,7 @@ Metriche per fold: R2 e MAE in scala log; R2, MAE e RMSE in scala originale.
 Grafici: dati reali vs curve predette (varianti a confronto), scala originale e scala log.
 
 Uso:
-  python training.py --data-dir output_preprocessing --out results_gam.csv --plot-dir plots_gam
+  python training.py --data-dir output_preprocessing --out results_gam_filtered.csv --plot-dir plots_gam
 """
 import argparse
 from pathlib import Path
@@ -143,7 +143,7 @@ def plot_curves(data: dict, scale: str, out: Path, variants: list) -> None:
             p = models[v].predict(grid)
             c = to_original(p) if scale == "orig" else p
             curves.append(c)
-            ax.plot(grid, c, color=VARIANT_COLOR[v], linewidth=2.2, label=VARIANT_LABEL[v] + " (modello su tutti i dati)")
+            ax.plot(grid, c, color=VARIANT_COLOR[v], linewidth=2.2, label=VARIANT_LABEL[v])
         ymax = float(y_real.max()); ymin = float(min(y_real.min(), *(c.min() for c in curves), 0))
         ax.set_ylim(ymin - 0.03 * ymax, 1.05 * ymax)
         unit = df["Units"].iloc[0] if "Units" in df.columns else ""
@@ -197,7 +197,6 @@ def main(a) -> None:
             cols = METRICS + ["lambda", "max_decrease_log"]
             all_rows.append({"pollutant": p, "variant": v, "fold": "mean", **r[cols].mean().to_dict()})
             all_rows.append({"pollutant": p, "variant": v, "fold": "std", **r[cols].std().to_dict()})
-            # modello su tutti i dati, solo per il grafico (lam = mediana dei lam scelti nei fold)
             lam_full = float(np.median(r["lambda"]))
             models[v] = PSpline(a.n_basis, lam_full, VARIANTS[v]).fit(sub[[FEATURE]].to_numpy(), sub[TARGET_LOG].to_numpy())
         plot_data[p] = (sub, models)
@@ -206,8 +205,8 @@ def main(a) -> None:
     res.insert(0, "model", f"gam_pspline_{a.n_basis}basis_ln1p_target")
     a.out.parent.mkdir(parents=True, exist_ok=True)
     res.to_csv(a.out, index=False)
-    plot_curves(plot_data, "orig", a.plot_dir / "curves_original_scale.png", variants)
-    plot_curves(plot_data, "log", a.plot_dir / "curves_log_scale.png", variants)
+    plot_curves(plot_data, "orig", a.plot_dir / "filtered_curves_original_scale.png", variants)
+    plot_curves(plot_data, "log", a.plot_dir / "filtered_curves_log_scale.png", variants)
 
     print(f"Risultati salvati in: {a.out.resolve()}")
     print(f"Grafici salvati in:   {a.plot_dir.resolve()}\n")
@@ -219,7 +218,7 @@ def main(a) -> None:
 if __name__ == "__main__":
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--data-dir", type=Path, default=Path("output_preprocessing"))
-    ap.add_argument("--out", type=Path, default=Path("results_gam.csv"))
+    ap.add_argument("--out", type=Path, default=Path("results_gam_filtered.csv"))
     ap.add_argument("--plot-dir", type=Path, default=Path("plots_gam"))
     ap.add_argument("--variants", nargs="+", choices=list(VARIANTS), default=["free", "monotone"])
     ap.add_argument("--n-basis", type=int, default=12, help="numero di funzioni di base della spline")
