@@ -1,0 +1,428 @@
+Country,pollutant,window_min,window_max,n_rows_in_window,exposure_min,exposure_max,motivo
+Afghanistan,pm25,11.819999999999999,31.980000000000004,0,46.1,77.1,esposizione sempre sopra la finestra italiana
+Bahrain,pm25,11.819999999999999,31.980000000000004,0,58.5,76.0,esposizione sempre sopra la finestra italiana
+Bangladesh,pm25,11.819999999999999,31.980000000000004,0,42.2,68.3,esposizione sempre sopra la finestra italiana
+Benin,pm25,11.819999999999999,31.980000000000004,0,42.0,66.7,esposizione sempre sopra la finestra italiana
+Burkina Faso,pm25,11.819999999999999,31.980000000000004,0,48.6,71.9,esposizione sempre sopra la finestra italiana
+Cameroon,pm25,11.819999999999999,31.980000000000004,0,37.0,51.9,esposizione sempre sopra la finestra italiana
+Chad,pm25,11.819999999999999,31.980000000000004,0,46.8,64.4,esposizione sempre sopra la finestra italiana
+China,pm25,11.819999999999999,31.980000000000004,0,34.8,58.5,esposizione sempre sopra la finestra italiana
+Côte d'Ivoire,pm25,11.819999999999999,31.980000000000004,0,38.9,62.0,esposizione sempre sopra la finestra italiana
+Djibouti,pm25,11.819999999999999,31.980000000000004,0,35.2,49.9,esposizione sempre sopra la finestra italiana
+Egypt,pm25,11.819999999999999,31.980000000000004,0,54.9,76.5,esposizione sempre sopra la finestra italiana
+Eritrea,pm25,11.819999999999999,31.980000000000004,0,32.4,43.6,esposizione sempre sopra la finestra italiana
+Gambia,pm25,11.819999999999999,31.980000000000004,0,47.6,66.4,esposizione sempre sopra la finestra italiana
+Ghana,pm25,11.819999999999999,31.980000000000004,0,44.0,68.0,esposizione sempre sopra la finestra italiana
+Guinea,pm25,11.819999999999999,31.980000000000004,0,37.4,54.3,esposizione sempre sopra la finestra italiana
+Guinea-Bissau,pm25,11.819999999999999,31.980000000000004,0,41.5,57.1,esposizione sempre sopra la finestra italiana
+India,pm25,11.819999999999999,31.980000000000004,0,48.4,79.0,esposizione sempre sopra la finestra italiana
+Iran (Islamic Republic of),pm25,11.819999999999999,31.980000000000004,0,32.3,39.6,esposizione sempre sopra la finestra italiana
+Iraq,pm25,11.819999999999999,31.980000000000004,0,37.7,48.6,esposizione sempre sopra la finestra italiana
+Kuwait,pm25,11.819999999999999,31.980000000000004,0,48.4,66.1,esposizione sempre sopra la finestra italiana
+Libya,pm25,11.819999999999999,31.980000000000004,0,32.8,50.1,esposizione sempre sopra la finestra italiana
+Mali,pm25,11.819999999999999,31.980000000000004,0,51.3,74.1,esposizione sempre sopra la finestra italiana
+Mauritania,pm25,11.819999999999999,31.980000000000004,0,64.2,85.1,esposizione sempre sopra la finestra italiana
+Nepal,pm25,11.819999999999999,31.980000000000004,0,45.7,75.1,esposizione sempre sopra la finestra italiana
+Niger,pm25,11.819999999999999,31.980000000000004,0,71.7,107.0,esposizione sempre sopra la finestra italiana
+Nigeria,pm25,11.819999999999999,31.980000000000004,0,48.1,77.1,esposizione sempre sopra la finestra italiana
+Oman,pm25,11.819999999999999,31.980000000000004,0,39.6,52.3,esposizione sempre sopra la finestra italiana
+Pakistan,pm25,11.819999999999999,31.980000000000004,0,43.0,71.7,esposizione sempre sopra la finestra italiana
+Qatar,pm25,11.819999999999999,31.980000000000004,0,75.2,97.7,esposizione sempre sopra la finestra italiana
+Saudi Arabia,pm25,11.819999999999999,31.980000000000004,0,46.7,65.8,esposizione sempre sopra la finestra italiana
+Senegal,pm25,11.819999999999999,31.980000000000004,0,50.8,72.0,esposizione sempre sopra la finestra italiana
+Sierra Leone,pm25,11.819999999999999,31.980000000000004,0,34.4,51.8,esposizione sempre sopra la finestra italiana
+Sudan,pm25,11.819999999999999,31.980000000000004,0,45.6,64.1,esposizione sempre sopra la finestra italiana
+Tajikistan,pm25,11.819999999999999,31.980000000000004,0,33.2,53.2,esposizione sempre sopra la finestra italiana
+Togo,pm25,11.819999999999999,31.980000000000004,0,43.0,67.3,esposizione sempre sopra la finestra italiana
+United Arab Emirates,pm25,11.819999999999999,31.980000000000004,0,36.3,49.9,esposizione sempre sopra la finestra italiana
+Yemen,pm25,11.819999999999999,31.980000000000004,0,34.8,53.6,esposizione sempre sopra la finestra italiana
+American Samoa,pm25,11.819999999999999,31.980000000000004,0,5.79,6.98,esposizione sempre sotto la finestra italiana
+Australia,pm25,11.819999999999999,31.980000000000004,0,6.99,9.33,esposizione sempre sotto la finestra italiana
+Bermuda,pm25,11.819999999999999,31.980000000000004,0,6.61,9.32,esposizione sempre sotto la finestra italiana
+Brunei Darussalam,pm25,11.819999999999999,31.980000000000004,0,6.29,8.37,esposizione sempre sotto la finestra italiana
+Canada,pm25,11.819999999999999,31.980000000000004,0,6.23,10.5,esposizione sempre sotto la finestra italiana
+Cook Islands,pm25,11.819999999999999,31.980000000000004,0,5.59,6.82,esposizione sempre sotto la finestra italiana
+Finland,pm25,11.819999999999999,31.980000000000004,0,4.9,9.25,esposizione sempre sotto la finestra italiana
+Greenland,pm25,11.819999999999999,31.980000000000004,0,5.74,7.56,esposizione sempre sotto la finestra italiana
+Guam,pm25,11.819999999999999,31.980000000000004,0,7.38,10.8,esposizione sempre sotto la finestra italiana
+Iceland,pm25,11.819999999999999,31.980000000000004,0,5.11,7.73,esposizione sempre sotto la finestra italiana
+Mauritius,pm25,11.819999999999999,31.980000000000004,0,8.74,11.3,esposizione sempre sotto la finestra italiana
+Nauru,pm25,11.819999999999999,31.980000000000004,0,5.45,6.51,esposizione sempre sotto la finestra italiana
+New Zealand,pm25,11.819999999999999,31.980000000000004,0,6.49,7.42,esposizione sempre sotto la finestra italiana
+Niue,pm25,11.819999999999999,31.980000000000004,0,5.51,6.8,esposizione sempre sotto la finestra italiana
+Northern Mariana Islands,pm25,11.819999999999999,31.980000000000004,0,7.49,10.0,esposizione sempre sotto la finestra italiana
+Palau,pm25,11.819999999999999,31.980000000000004,0,5.81,8.94,esposizione sempre sotto la finestra italiana
+Puerto Rico,pm25,11.819999999999999,31.980000000000004,0,5.66,7.53,esposizione sempre sotto la finestra italiana
+Saint Kitts and Nevis,pm25,11.819999999999999,31.980000000000004,0,7.02,9.14,esposizione sempre sotto la finestra italiana
+Seychelles,pm25,11.819999999999999,31.980000000000004,0,8.5,10.5,esposizione sempre sotto la finestra italiana
+Sweden,pm25,11.819999999999999,31.980000000000004,0,5.64,11.1,esposizione sempre sotto la finestra italiana
+Tokelau,pm25,11.819999999999999,31.980000000000004,0,5.6,6.97,esposizione sempre sotto la finestra italiana
+Tuvalu,pm25,11.819999999999999,31.980000000000004,0,5.23,6.2,esposizione sempre sotto la finestra italiana
+United States Virgin Islands,pm25,11.819999999999999,31.980000000000004,0,6.78,8.81,esposizione sempre sotto la finestra italiana
+Bosnia and Herzegovina,pm25,11.819999999999999,31.980000000000004,4,26.6,39.4,troppo poche righe nella finestra (meno di 8)
+Cabo Verde,pm25,11.819999999999999,31.980000000000004,6,24.9,53.9,troppo poche righe nella finestra (meno di 8)
+Central African Republic,pm25,11.819999999999999,31.980000000000004,1,31.9,38.6,troppo poche righe nella finestra (meno di 8)
+Democratic People's Republic of Korea,pm25,11.819999999999999,31.980000000000004,2,29.9,46.1,troppo poche righe nella finestra (meno di 8)
+Liberia,pm25,11.819999999999999,31.980000000000004,1,31.7,51.1,troppo poche righe nella finestra (meno di 8)
+Marshall Islands,pm25,11.819999999999999,31.980000000000004,3,10.3,11.9,troppo poche righe nella finestra (meno di 8)
+Myanmar,pm25,11.819999999999999,31.980000000000004,6,28.1,41.6,troppo poche righe nella finestra (meno di 8)
+North Macedonia,pm25,11.819999999999999,31.980000000000004,6,25.9,42.8,troppo poche righe nella finestra (meno di 8)
+Norway,pm25,11.819999999999999,31.980000000000004,2,6.06,12.1,troppo poche righe nella finestra (meno di 8)
+Peru,pm25,11.819999999999999,31.980000000000004,3,27.0,80.7,troppo poche righe nella finestra (meno di 8)
+Kuwait,no2,8.24,24.060000000000002,0,25.9,33.4,esposizione sempre sopra la finestra italiana
+Qatar,no2,8.24,24.060000000000002,0,26.2,37.1,esposizione sempre sopra la finestra italiana
+Belize,no2,8.24,24.060000000000002,0,2.73,3.61,esposizione sempre sotto la finestra italiana
+Benin,no2,8.24,24.060000000000002,0,4.48,6.31,esposizione sempre sotto la finestra italiana
+Bhutan,no2,8.24,24.060000000000002,0,2.78,4.39,esposizione sempre sotto la finestra italiana
+Botswana,no2,8.24,24.060000000000002,0,4.29,5.22,esposizione sempre sotto la finestra italiana
+Burkina Faso,no2,8.24,24.060000000000002,0,3.89,5.6,esposizione sempre sotto la finestra italiana
+Burundi,no2,8.24,24.060000000000002,0,2.72,3.85,esposizione sempre sotto la finestra italiana
+Cambodia,no2,8.24,24.060000000000002,0,5.2,7.88,esposizione sempre sotto la finestra italiana
+Cameroon,no2,8.24,24.060000000000002,0,4.1,5.81,esposizione sempre sotto la finestra italiana
+Central African Republic,no2,8.24,24.060000000000002,0,3.12,4.07,esposizione sempre sotto la finestra italiana
+Chad,no2,8.24,24.060000000000002,0,2.58,3.03,esposizione sempre sotto la finestra italiana
+Comoros,no2,8.24,24.060000000000002,0,0.406,0.789,esposizione sempre sotto la finestra italiana
+Congo,no2,8.24,24.060000000000002,0,4.82,6.9,esposizione sempre sotto la finestra italiana
+Côte d'Ivoire,no2,8.24,24.060000000000002,0,4.47,6.42,esposizione sempre sotto la finestra italiana
+Democratic Republic of the Congo,no2,8.24,24.060000000000002,0,3.85,5.13,esposizione sempre sotto la finestra italiana
+Dominica,no2,8.24,24.060000000000002,0,2.43,3.47,esposizione sempre sotto la finestra italiana
+Equatorial Guinea,no2,8.24,24.060000000000002,0,0.778,1.5,esposizione sempre sotto la finestra italiana
+Eritrea,no2,8.24,24.060000000000002,0,4.1,5.26,esposizione sempre sotto la finestra italiana
+Eswatini,no2,8.24,24.060000000000002,0,3.99,5.66,esposizione sempre sotto la finestra italiana
+Ethiopia,no2,8.24,24.060000000000002,0,3.62,4.85,esposizione sempre sotto la finestra italiana
+Fiji,no2,8.24,24.060000000000002,0,1.36,1.87,esposizione sempre sotto la finestra italiana
+Gabon,no2,8.24,24.060000000000002,0,2.44,3.02,esposizione sempre sotto la finestra italiana
+Gambia,no2,8.24,24.060000000000002,0,6.44,7.73,esposizione sempre sotto la finestra italiana
+Ghana,no2,8.24,24.060000000000002,0,4.96,6.73,esposizione sempre sotto la finestra italiana
+Greenland,no2,8.24,24.060000000000002,0,3.97,7.32,esposizione sempre sotto la finestra italiana
+Grenada,no2,8.24,24.060000000000002,0,2.03,4.81,esposizione sempre sotto la finestra italiana
+Guam,no2,8.24,24.060000000000002,0,0.293,1.33,esposizione sempre sotto la finestra italiana
+Guinea,no2,8.24,24.060000000000002,0,3.22,4.0,esposizione sempre sotto la finestra italiana
+Guinea-Bissau,no2,8.24,24.060000000000002,0,2.49,3.18,esposizione sempre sotto la finestra italiana
+Guyana,no2,8.24,24.060000000000002,0,3.24,6.55,esposizione sempre sotto la finestra italiana
+Haiti,no2,8.24,24.060000000000002,0,6.45,7.78,esposizione sempre sotto la finestra italiana
+Honduras,no2,8.24,24.060000000000002,0,6.0,7.05,esposizione sempre sotto la finestra italiana
+Indonesia,no2,8.24,24.060000000000002,0,5.82,7.84,esposizione sempre sotto la finestra italiana
+Jamaica,no2,8.24,24.060000000000002,0,5.21,7.28,esposizione sempre sotto la finestra italiana
+Kenya,no2,8.24,24.060000000000002,0,3.65,4.55,esposizione sempre sotto la finestra italiana
+Kiribati,no2,8.24,24.060000000000002,0,1.28,2.19,esposizione sempre sotto la finestra italiana
+Lao People's Democratic Republic,no2,8.24,24.060000000000002,0,4.03,6.88,esposizione sempre sotto la finestra italiana
+Lesotho,no2,8.24,24.060000000000002,0,4.8,7.11,esposizione sempre sotto la finestra italiana
+Liberia,no2,8.24,24.060000000000002,0,2.22,2.98,esposizione sempre sotto la finestra italiana
+Madagascar,no2,8.24,24.060000000000002,0,1.69,2.87,esposizione sempre sotto la finestra italiana
+Malawi,no2,8.24,24.060000000000002,0,3.4,5.27,esposizione sempre sotto la finestra italiana
+Maldives,no2,8.24,24.060000000000002,0,0.36,1.81,esposizione sempre sotto la finestra italiana
+Mali,no2,8.24,24.060000000000002,0,5.45,7.25,esposizione sempre sotto la finestra italiana
+Marshall Islands,no2,8.24,24.060000000000002,0,1.28,2.19,esposizione sempre sotto la finestra italiana
+Mauritania,no2,8.24,24.060000000000002,0,5.26,7.68,esposizione sempre sotto la finestra italiana
+Mauritius,no2,8.24,24.060000000000002,0,0.173,3.88,esposizione sempre sotto la finestra italiana
+Micronesia (Federated States of),no2,8.24,24.060000000000002,0,0.0224,0.122,esposizione sempre sotto la finestra italiana
+Montenegro,no2,8.24,24.060000000000002,0,6.15,7.21,esposizione sempre sotto la finestra italiana
+Mozambique,no2,8.24,24.060000000000002,0,2.48,3.8,esposizione sempre sotto la finestra italiana
+Myanmar,no2,8.24,24.060000000000002,0,4.92,7.09,esposizione sempre sotto la finestra italiana
+Nicaragua,no2,8.24,24.060000000000002,0,4.98,5.9,esposizione sempre sotto la finestra italiana
+Niger,no2,8.24,24.060000000000002,0,4.86,6.28,esposizione sempre sotto la finestra italiana
+Nigeria,no2,8.24,24.060000000000002,0,6.0,6.84,esposizione sempre sotto la finestra italiana
+Palau,no2,8.24,24.060000000000002,0,0.202,4.78,esposizione sempre sotto la finestra italiana
+Panama,no2,8.24,24.060000000000002,0,6.02,7.23,esposizione sempre sotto la finestra italiana
+Papua New Guinea,no2,8.24,24.060000000000002,0,1.28,2.19,esposizione sempre sotto la finestra italiana
+Rwanda,no2,8.24,24.060000000000002,0,3.64,4.53,esposizione sempre sotto la finestra italiana
+Saint Kitts and Nevis,no2,8.24,24.060000000000002,0,0.00709,5.15,esposizione sempre sotto la finestra italiana
+Saint Lucia,no2,8.24,24.060000000000002,0,0.0202,2.8,esposizione sempre sotto la finestra italiana
+Saint Vincent and the Grenadines,no2,8.24,24.060000000000002,0,2.14,3.03,esposizione sempre sotto la finestra italiana
+Sao Tome and Principe,no2,8.24,24.060000000000002,0,0.0988,0.603,esposizione sempre sotto la finestra italiana
+Seychelles,no2,8.24,24.060000000000002,0,0.000943,0.793,esposizione sempre sotto la finestra italiana
+Sierra Leone,no2,8.24,24.060000000000002,0,2.02,5.08,esposizione sempre sotto la finestra italiana
+Solomon Islands,no2,8.24,24.060000000000002,0,0.439,0.788,esposizione sempre sotto la finestra italiana
+Somalia,no2,8.24,24.060000000000002,0,3.38,4.05,esposizione sempre sotto la finestra italiana
+South Sudan,no2,8.24,24.060000000000002,0,1.69,2.12,esposizione sempre sotto la finestra italiana
+Sri Lanka,no2,8.24,24.060000000000002,0,4.29,7.55,esposizione sempre sotto la finestra italiana
+Sudan,no2,8.24,24.060000000000002,0,4.29,5.24,esposizione sempre sotto la finestra italiana
+Suriname,no2,8.24,24.060000000000002,0,5.29,7.08,esposizione sempre sotto la finestra italiana
+Timor-Leste,no2,8.24,24.060000000000002,0,2.79,5.81,esposizione sempre sotto la finestra italiana
+Togo,no2,8.24,24.060000000000002,0,4.72,6.0,esposizione sempre sotto la finestra italiana
+Trinidad and Tobago,no2,8.24,24.060000000000002,0,6.13,8.06,esposizione sempre sotto la finestra italiana
+Tuvalu,no2,8.24,24.060000000000002,0,0.0126,0.125,esposizione sempre sotto la finestra italiana
+Uganda,no2,8.24,24.060000000000002,0,2.65,3.5,esposizione sempre sotto la finestra italiana
+United Republic of Tanzania,no2,8.24,24.060000000000002,0,2.95,3.73,esposizione sempre sotto la finestra italiana
+Zambia,no2,8.24,24.060000000000002,0,3.14,4.98,esposizione sempre sotto la finestra italiana
+Zimbabwe,no2,8.24,24.060000000000002,0,4.34,5.26,esposizione sempre sotto la finestra italiana
+American Samoa,no2,8.24,24.060000000000002,6,4.97,8.87,troppo poche righe nella finestra (meno di 8)
+Angola,no2,8.24,24.060000000000002,3,1.85,8.63,troppo poche righe nella finestra (meno di 8)
+Brunei Darussalam,no2,8.24,24.060000000000002,7,5.63,8.98,troppo poche righe nella finestra (meno di 8)
+Nepal,no2,8.24,24.060000000000002,7,3.21,11.3,troppo poche righe nella finestra (meno di 8)
+Republic of Korea,no2,8.24,24.060000000000002,1,23.0,32.4,troppo poche righe nella finestra (meno di 8)
+Senegal,no2,8.24,24.060000000000002,1,6.92,8.28,troppo poche righe nella finestra (meno di 8)
+Singapore,no2,8.24,24.060000000000002,4,23.0,38.1,troppo poche righe nella finestra (meno di 8)
+United States Virgin Islands,no2,8.24,24.060000000000002,7,4.37,24.7,troppo poche righe nella finestra (meno di 8)
+American Samoa,ozone,45.559999999999995,58.440000000000005,0,32.4,37.3,esposizione sempre sotto la finestra italiana
+Antigua and Barbuda,ozone,45.559999999999995,58.440000000000005,0,17.1,35.5,esposizione sempre sotto la finestra italiana
+Argentina,ozone,45.559999999999995,58.440000000000005,0,32.7,35.8,esposizione sempre sotto la finestra italiana
+Australia,ozone,45.559999999999995,58.440000000000005,0,27.2,30.7,esposizione sempre sotto la finestra italiana
+Bahamas,ozone,45.559999999999995,58.440000000000005,0,36.2,43.5,esposizione sempre sotto la finestra italiana
+Barbados,ozone,45.559999999999995,58.440000000000005,0,17.1,33.7,esposizione sempre sotto la finestra italiana
+Belarus,ozone,45.559999999999995,58.440000000000005,0,36.7,42.4,esposizione sempre sotto la finestra italiana
+Belgium,ozone,45.559999999999995,58.440000000000005,0,35.4,42.3,esposizione sempre sotto la finestra italiana
+Belize,ozone,45.559999999999995,58.440000000000005,0,35.9,42.5,esposizione sempre sotto la finestra italiana
+Bolivia (Plurinational State of),ozone,45.559999999999995,58.440000000000005,0,28.8,41.1,esposizione sempre sotto la finestra italiana
+Botswana,ozone,45.559999999999995,58.440000000000005,0,34.1,45.1,esposizione sempre sotto la finestra italiana
+Brazil,ozone,45.559999999999995,58.440000000000005,0,31.9,40.5,esposizione sempre sotto la finestra italiana
+Brunei Darussalam,ozone,45.559999999999995,58.440000000000005,0,23.3,33.9,esposizione sempre sotto la finestra italiana
+Cabo Verde,ozone,45.559999999999995,58.440000000000005,0,31.8,40.0,esposizione sempre sotto la finestra italiana
+Cambodia,ozone,45.559999999999995,58.440000000000005,0,28.1,42.6,esposizione sempre sotto la finestra italiana
+Canada,ozone,45.559999999999995,58.440000000000005,0,36.5,41.0,esposizione sempre sotto la finestra italiana
+Chile,ozone,45.559999999999995,58.440000000000005,0,33.9,38.6,esposizione sempre sotto la finestra italiana
+Colombia,ozone,45.559999999999995,58.440000000000005,0,27.8,32.7,esposizione sempre sotto la finestra italiana
+Comoros,ozone,45.559999999999995,58.440000000000005,0,18.3,32.7,esposizione sempre sotto la finestra italiana
+Cook Islands,ozone,45.559999999999995,58.440000000000005,0,32.7,37.2,esposizione sempre sotto la finestra italiana
+Costa Rica,ozone,45.559999999999995,58.440000000000005,0,29.9,37.0,esposizione sempre sotto la finestra italiana
+Cuba,ozone,45.559999999999995,58.440000000000005,0,34.2,40.9,esposizione sempre sotto la finestra italiana
+Côte d'Ivoire,ozone,45.559999999999995,58.440000000000005,0,26.4,45.3,esposizione sempre sotto la finestra italiana
+Denmark,ozone,45.559999999999995,58.440000000000005,0,37.0,41.2,esposizione sempre sotto la finestra italiana
+Dominica,ozone,45.559999999999995,58.440000000000005,0,20.2,34.6,esposizione sempre sotto la finestra italiana
+Dominican Republic,ozone,45.559999999999995,58.440000000000005,0,33.6,43.4,esposizione sempre sotto la finestra italiana
+Ecuador,ozone,45.559999999999995,58.440000000000005,0,26.8,33.3,esposizione sempre sotto la finestra italiana
+Equatorial Guinea,ozone,45.559999999999995,58.440000000000005,0,22.0,44.0,esposizione sempre sotto la finestra italiana
+Eritrea,ozone,45.559999999999995,58.440000000000005,0,39.0,44.1,esposizione sempre sotto la finestra italiana
+Estonia,ozone,45.559999999999995,58.440000000000005,0,35.0,39.0,esposizione sempre sotto la finestra italiana
+Eswatini,ozone,45.559999999999995,58.440000000000005,0,28.7,44.8,esposizione sempre sotto la finestra italiana
+Ethiopia,ozone,45.559999999999995,58.440000000000005,0,31.4,45.3,esposizione sempre sotto la finestra italiana
+Fiji,ozone,45.559999999999995,58.440000000000005,0,20.2,27.4,esposizione sempre sotto la finestra italiana
+Finland,ozone,45.559999999999995,58.440000000000005,0,32.8,39.9,esposizione sempre sotto la finestra italiana
+Gabon,ozone,45.559999999999995,58.440000000000005,0,19.0,37.0,esposizione sempre sotto la finestra italiana
+Gambia,ozone,45.559999999999995,58.440000000000005,0,33.1,44.3,esposizione sempre sotto la finestra italiana
+Germany,ozone,45.559999999999995,58.440000000000005,0,39.4,44.7,esposizione sempre sotto la finestra italiana
+Greenland,ozone,45.559999999999995,58.440000000000005,0,36.0,41.6,esposizione sempre sotto la finestra italiana
+Grenada,ozone,45.559999999999995,58.440000000000005,0,28.2,36.2,esposizione sempre sotto la finestra italiana
+Guam,ozone,45.559999999999995,58.440000000000005,0,15.0,24.2,esposizione sempre sotto la finestra italiana
+Guatemala,ozone,45.559999999999995,58.440000000000005,0,33.2,44.6,esposizione sempre sotto la finestra italiana
+Guinea-Bissau,ozone,45.559999999999995,58.440000000000005,0,30.9,44.8,esposizione sempre sotto la finestra italiana
+Guyana,ozone,45.559999999999995,58.440000000000005,0,21.9,25.2,esposizione sempre sotto la finestra italiana
+Honduras,ozone,45.559999999999995,58.440000000000005,0,32.8,39.7,esposizione sempre sotto la finestra italiana
+Iceland,ozone,45.559999999999995,58.440000000000005,0,32.5,38.2,esposizione sempre sotto la finestra italiana
+Indonesia,ozone,45.559999999999995,58.440000000000005,0,28.3,39.5,esposizione sempre sotto la finestra italiana
+Ireland,ozone,45.559999999999995,58.440000000000005,0,27.4,36.9,esposizione sempre sotto la finestra italiana
+Kenya,ozone,45.559999999999995,58.440000000000005,0,22.3,40.6,esposizione sempre sotto la finestra italiana
+Kiribati,ozone,45.559999999999995,58.440000000000005,0,28.4,40.9,esposizione sempre sotto la finestra italiana
+Lao People's Democratic Republic,ozone,45.559999999999995,58.440000000000005,0,32.1,43.9,esposizione sempre sotto la finestra italiana
+Latvia,ozone,45.559999999999995,58.440000000000005,0,35.5,40.1,esposizione sempre sotto la finestra italiana
+Lesotho,ozone,45.559999999999995,58.440000000000005,0,33.3,44.3,esposizione sempre sotto la finestra italiana
+Liberia,ozone,45.559999999999995,58.440000000000005,0,24.3,42.4,esposizione sempre sotto la finestra italiana
+Lithuania,ozone,45.559999999999995,58.440000000000005,0,34.4,39.4,esposizione sempre sotto la finestra italiana
+Luxembourg,ozone,45.559999999999995,58.440000000000005,0,38.4,44.7,esposizione sempre sotto la finestra italiana
+Madagascar,ozone,45.559999999999995,58.440000000000005,0,19.6,36.1,esposizione sempre sotto la finestra italiana
+Malawi,ozone,45.559999999999995,58.440000000000005,0,27.7,41.4,esposizione sempre sotto la finestra italiana
+Malaysia,ozone,45.559999999999995,58.440000000000005,0,30.6,39.8,esposizione sempre sotto la finestra italiana
+Mali,ozone,45.559999999999995,58.440000000000005,0,30.2,45.4,esposizione sempre sotto la finestra italiana
+Marshall Islands,ozone,45.559999999999995,58.440000000000005,0,11.4,18.4,esposizione sempre sotto la finestra italiana
+Mauritania,ozone,45.559999999999995,58.440000000000005,0,30.0,41.4,esposizione sempre sotto la finestra italiana
+Mauritius,ozone,45.559999999999995,58.440000000000005,0,18.9,27.7,esposizione sempre sotto la finestra italiana
+Micronesia (Federated States of),ozone,45.559999999999995,58.440000000000005,0,14.7,23.4,esposizione sempre sotto la finestra italiana
+Mozambique,ozone,45.559999999999995,58.440000000000005,0,24.4,37.2,esposizione sempre sotto la finestra italiana
+Nauru,ozone,45.559999999999995,58.440000000000005,0,12.9,19.3,esposizione sempre sotto la finestra italiana
+Netherlands,ozone,45.559999999999995,58.440000000000005,0,36.1,41.1,esposizione sempre sotto la finestra italiana
+New Zealand,ozone,45.559999999999995,58.440000000000005,0,25.3,30.2,esposizione sempre sotto la finestra italiana
+Nicaragua,ozone,45.559999999999995,58.440000000000005,0,30.9,36.7,esposizione sempre sotto la finestra italiana
+Niue,ozone,45.559999999999995,58.440000000000005,0,32.4,37.2,esposizione sempre sotto la finestra italiana
+Norway,ozone,45.559999999999995,58.440000000000005,0,33.8,41.4,esposizione sempre sotto la finestra italiana
+Palau,ozone,45.559999999999995,58.440000000000005,0,16.6,24.2,esposizione sempre sotto la finestra italiana
+Panama,ozone,45.559999999999995,58.440000000000005,0,31.0,40.8,esposizione sempre sotto la finestra italiana
+Papua New Guinea,ozone,45.559999999999995,58.440000000000005,0,14.3,20.0,esposizione sempre sotto la finestra italiana
+Paraguay,ozone,45.559999999999995,58.440000000000005,0,32.0,41.7,esposizione sempre sotto la finestra italiana
+Peru,ozone,45.559999999999995,58.440000000000005,0,25.2,36.0,esposizione sempre sotto la finestra italiana
+Philippines,ozone,45.559999999999995,58.440000000000005,0,23.9,29.8,esposizione sempre sotto la finestra italiana
+Puerto Rico,ozone,45.559999999999995,58.440000000000005,0,24.6,36.2,esposizione sempre sotto la finestra italiana
+Russian Federation,ozone,45.559999999999995,58.440000000000005,0,35.7,44.9,esposizione sempre sotto la finestra italiana
+Saint Kitts and Nevis,ozone,45.559999999999995,58.440000000000005,0,16.4,35.3,esposizione sempre sotto la finestra italiana
+Saint Lucia,ozone,45.559999999999995,58.440000000000005,0,21.7,33.3,esposizione sempre sotto la finestra italiana
+Saint Vincent and the Grenadines,ozone,45.559999999999995,58.440000000000005,0,21.5,33.2,esposizione sempre sotto la finestra italiana
+Samoa,ozone,45.559999999999995,58.440000000000005,0,32.7,37.3,esposizione sempre sotto la finestra italiana
+Sao Tome and Principe,ozone,45.559999999999995,58.440000000000005,0,25.4,40.8,esposizione sempre sotto la finestra italiana
+Senegal,ozone,45.559999999999995,58.440000000000005,0,31.7,43.3,esposizione sempre sotto la finestra italiana
+Seychelles,ozone,45.559999999999995,58.440000000000005,0,17.9,31.8,esposizione sempre sotto la finestra italiana
+Sierra Leone,ozone,45.559999999999995,58.440000000000005,0,30.9,43.0,esposizione sempre sotto la finestra italiana
+Solomon Islands,ozone,45.559999999999995,58.440000000000005,0,13.6,19.8,esposizione sempre sotto la finestra italiana
+Somalia,ozone,45.559999999999995,58.440000000000005,0,24.1,39.3,esposizione sempre sotto la finestra italiana
+South Africa,ozone,45.559999999999995,58.440000000000005,0,31.3,41.6,esposizione sempre sotto la finestra italiana
+Sri Lanka,ozone,45.559999999999995,58.440000000000005,0,27.1,41.9,esposizione sempre sotto la finestra italiana
+Suriname,ozone,45.559999999999995,58.440000000000005,0,21.3,25.5,esposizione sempre sotto la finestra italiana
+Sweden,ozone,45.559999999999995,58.440000000000005,0,35.0,40.9,esposizione sempre sotto la finestra italiana
+Timor-Leste,ozone,45.559999999999995,58.440000000000005,0,26.7,35.6,esposizione sempre sotto la finestra italiana
+Tokelau,ozone,45.559999999999995,58.440000000000005,0,32.4,37.1,esposizione sempre sotto la finestra italiana
+Tonga,ozone,45.559999999999995,58.440000000000005,0,32.4,37.2,esposizione sempre sotto la finestra italiana
+Trinidad and Tobago,ozone,45.559999999999995,58.440000000000005,0,26.1,32.3,esposizione sempre sotto la finestra italiana
+Tuvalu,ozone,45.559999999999995,58.440000000000005,0,19.0,25.0,esposizione sempre sotto la finestra italiana
+Uganda,ozone,45.559999999999995,58.440000000000005,0,27.7,44.5,esposizione sempre sotto la finestra italiana
+United Kingdom,ozone,45.559999999999995,58.440000000000005,0,31.1,35.3,esposizione sempre sotto la finestra italiana
+United Republic of Tanzania,ozone,45.559999999999995,58.440000000000005,0,23.2,39.0,esposizione sempre sotto la finestra italiana
+United States Virgin Islands,ozone,45.559999999999995,58.440000000000005,0,22.2,35.4,esposizione sempre sotto la finestra italiana
+Uruguay,ozone,45.559999999999995,58.440000000000005,0,30.1,32.5,esposizione sempre sotto la finestra italiana
+Vanuatu,ozone,45.559999999999995,58.440000000000005,0,20.3,25.7,esposizione sempre sotto la finestra italiana
+Venezuela (Bolivarian Republic of),ozone,45.559999999999995,58.440000000000005,0,31.4,37.2,esposizione sempre sotto la finestra italiana
+Viet Nam,ozone,45.559999999999995,58.440000000000005,0,32.3,42.3,esposizione sempre sotto la finestra italiana
+Zimbabwe,ozone,45.559999999999995,58.440000000000005,0,31.2,44.4,esposizione sempre sotto la finestra italiana
+Burkina Faso,ozone,45.559999999999995,58.440000000000005,3,33.1,47.9,troppo poche righe nella finestra (meno di 8)
+Burundi,ozone,45.559999999999995,58.440000000000005,2,29.7,47.0,troppo poche righe nella finestra (meno di 8)
+Cameroon,ozone,45.559999999999995,58.440000000000005,5,32.4,51.1,troppo poche righe nella finestra (meno di 8)
+Chad,ozone,45.559999999999995,58.440000000000005,3,35.7,47.8,troppo poche righe nella finestra (meno di 8)
+Congo,ozone,45.559999999999995,58.440000000000005,1,25.7,46.3,troppo poche righe nella finestra (meno di 8)
+Democratic Republic of the Congo,ozone,45.559999999999995,58.440000000000005,4,30.2,48.3,troppo poche righe nella finestra (meno di 8)
+Djibouti,ozone,45.559999999999995,58.440000000000005,1,33.4,45.9,troppo poche righe nella finestra (meno di 8)
+El Salvador,ozone,45.559999999999995,58.440000000000005,5,35.8,48.4,troppo poche righe nella finestra (meno di 8)
+France,ozone,45.559999999999995,58.440000000000005,3,41.8,46.5,troppo poche righe nella finestra (meno di 8)
+Ghana,ozone,45.559999999999995,58.440000000000005,4,30.6,50.8,troppo poche righe nella finestra (meno di 8)
+Guinea,ozone,45.559999999999995,58.440000000000005,1,31.8,46.4,troppo poche righe nella finestra (meno di 8)
+Haiti,ozone,45.559999999999995,58.440000000000005,3,37.9,47.7,troppo poche righe nella finestra (meno di 8)
+Jamaica,ozone,45.559999999999995,58.440000000000005,7,38.8,50.6,troppo poche righe nella finestra (meno di 8)
+Maldives,ozone,45.559999999999995,58.440000000000005,6,32.8,52.6,troppo poche righe nella finestra (meno di 8)
+Myanmar,ozone,45.559999999999995,58.440000000000005,1,35.3,45.7,troppo poche righe nella finestra (meno di 8)
+Namibia,ozone,45.559999999999995,58.440000000000005,2,35.5,48.4,troppo poche righe nella finestra (meno di 8)
+Niger,ozone,45.559999999999995,58.440000000000005,3,35.2,48.6,troppo poche righe nella finestra (meno di 8)
+Poland,ozone,45.559999999999995,58.440000000000005,3,41.7,46.2,troppo poche righe nella finestra (meno di 8)
+Portugal,ozone,45.559999999999995,58.440000000000005,1,33.5,45.8,troppo poche righe nella finestra (meno di 8)
+Qatar,ozone,45.559999999999995,58.440000000000005,7,57.1,68.4,troppo poche righe nella finestra (meno di 8)
+Rwanda,ozone,45.559999999999995,58.440000000000005,3,29.2,49.0,troppo poche righe nella finestra (meno di 8)
+Singapore,ozone,45.559999999999995,58.440000000000005,1,31.8,45.6,troppo poche righe nella finestra (meno di 8)
+South Sudan,ozone,45.559999999999995,58.440000000000005,6,38.0,47.0,troppo poche righe nella finestra (meno di 8)
+Sudan,ozone,45.559999999999995,58.440000000000005,3,36.4,47.8,troppo poche righe nella finestra (meno di 8)
+Thailand,ozone,45.559999999999995,58.440000000000005,1,30.2,46.3,troppo poche righe nella finestra (meno di 8)
+Yemen,ozone,45.559999999999995,58.440000000000005,6,39.0,49.1,troppo poche righe nella finestra (meno di 8)
+Zambia,ozone,45.559999999999995,58.440000000000005,3,35.0,48.8,troppo poche righe nella finestra (meno di 8)
+Afghanistan,hap,0.0,0.024,0,0.64,0.86,esposizione sempre sopra la finestra italiana
+Albania,hap,0.0,0.024,0,0.22,0.67,esposizione sempre sopra la finestra italiana
+American Samoa,hap,0.0,0.024,0,0.1,0.2,esposizione sempre sopra la finestra italiana
+Angola,hap,0.0,0.024,0,0.35,0.9,esposizione sempre sopra la finestra italiana
+Armenia,hap,0.0,0.024,0,0.03,0.17,esposizione sempre sopra la finestra italiana
+Azerbaijan,hap,0.0,0.024,0,0.07,0.42,esposizione sempre sopra la finestra italiana
+Bangladesh,hap,0.0,0.024,0,0.73,0.96,esposizione sempre sopra la finestra italiana
+Belize,hap,0.0,0.024,0,0.11,0.21,esposizione sempre sopra la finestra italiana
+Benin,hap,0.0,0.024,0,0.93,0.98,esposizione sempre sopra la finestra italiana
+Bhutan,hap,0.0,0.024,0,0.18,0.83,esposizione sempre sopra la finestra italiana
+Bolivia (Plurinational State of),hap,0.0,0.024,0,0.15,0.48,esposizione sempre sopra la finestra italiana
+Bosnia and Herzegovina,hap,0.0,0.024,0,0.38,0.74,esposizione sempre sopra la finestra italiana
+Botswana,hap,0.0,0.024,0,0.37,0.75,esposizione sempre sopra la finestra italiana
+Brazil,hap,0.0,0.024,0,0.07,0.32,esposizione sempre sopra la finestra italiana
+Bulgaria,hap,0.0,0.024,0,0.16,0.21,esposizione sempre sopra la finestra italiana
+Burkina Faso,hap,0.0,0.024,0,0.93,0.98,esposizione sempre sopra la finestra italiana
+Burundi,hap,0.0,0.024,0,0.98,1.0,esposizione sempre sopra la finestra italiana
+Cabo Verde,hap,0.0,0.024,0,0.17,0.73,esposizione sempre sopra la finestra italiana
+Cambodia,hap,0.0,0.024,0,0.78,0.97,esposizione sempre sopra la finestra italiana
+Cameroon,hap,0.0,0.024,0,0.71,0.84,esposizione sempre sopra la finestra italiana
+Central African Republic,hap,0.0,0.024,0,1.0,1.0,esposizione sempre sopra la finestra italiana
+Chad,hap,0.0,0.024,0,0.96,0.98,esposizione sempre sopra la finestra italiana
+Chile,hap,0.0,0.024,0,0.05,0.21,esposizione sempre sopra la finestra italiana
+China,hap,0.0,0.024,0,0.3,0.85,esposizione sempre sopra la finestra italiana
+Colombia,hap,0.0,0.024,0,0.08,0.3,esposizione sempre sopra la finestra italiana
+Comoros,hap,0.0,0.024,0,0.79,0.97,esposizione sempre sopra la finestra italiana
+Congo,hap,0.0,0.024,0,0.5,0.95,esposizione sempre sopra la finestra italiana
+Cook Islands,hap,0.0,0.024,0,0.08,0.18,esposizione sempre sopra la finestra italiana
+Costa Rica,hap,0.0,0.024,0,0.06,0.26,esposizione sempre sopra la finestra italiana
+Croatia,hap,0.0,0.024,0,0.05,0.17,esposizione sempre sopra la finestra italiana
+Côte d'Ivoire,hap,0.0,0.024,0,0.78,0.93,esposizione sempre sopra la finestra italiana
+Democratic People's Republic of Korea,hap,0.0,0.024,0,0.84,0.98,esposizione sempre sopra la finestra italiana
+Democratic Republic of the Congo,hap,0.0,0.024,0,0.92,0.99,esposizione sempre sopra la finestra italiana
+Djibouti,hap,0.0,0.024,0,0.16,0.52,esposizione sempre sopra la finestra italiana
+Dominica,hap,0.0,0.024,0,0.07,0.44,esposizione sempre sopra la finestra italiana
+Dominican Republic,hap,0.0,0.024,0,0.08,0.48,esposizione sempre sopra la finestra italiana
+Ecuador,hap,0.0,0.024,0,0.05,0.28,esposizione sempre sopra la finestra italiana
+El Salvador,hap,0.0,0.024,0,0.12,0.64,esposizione sempre sopra la finestra italiana
+Equatorial Guinea,hap,0.0,0.024,0,0.21,0.9,esposizione sempre sopra la finestra italiana
+Eritrea,hap,0.0,0.024,0,0.67,0.85,esposizione sempre sopra la finestra italiana
+Estonia,hap,0.0,0.024,0,0.09,0.17,esposizione sempre sopra la finestra italiana
+Eswatini,hap,0.0,0.024,0,0.53,0.81,esposizione sempre sopra la finestra italiana
+Ethiopia,hap,0.0,0.024,0,0.96,0.98,esposizione sempre sopra la finestra italiana
+Fiji,hap,0.0,0.024,0,0.26,0.6,esposizione sempre sopra la finestra italiana
+Gabon,hap,0.0,0.024,0,0.09,0.51,esposizione sempre sopra la finestra italiana
+Gambia,hap,0.0,0.024,0,0.94,0.98,esposizione sempre sopra la finestra italiana
+Georgia,hap,0.0,0.024,0,0.19,0.48,esposizione sempre sopra la finestra italiana
+Ghana,hap,0.0,0.024,0,0.74,0.96,esposizione sempre sopra la finestra italiana
+Guam,hap,0.0,0.024,0,0.07,0.1,esposizione sempre sopra la finestra italiana
+Guatemala,hap,0.0,0.024,0,0.53,0.7,esposizione sempre sopra la finestra italiana
+Guinea,hap,0.0,0.024,0,0.97,0.99,esposizione sempre sopra la finestra italiana
+Guinea-Bissau,hap,0.0,0.024,0,0.97,0.98,esposizione sempre sopra la finestra italiana
+Guyana,hap,0.0,0.024,0,0.05,0.19,esposizione sempre sopra la finestra italiana
+Haiti,hap,0.0,0.024,0,0.92,0.97,esposizione sempre sopra la finestra italiana
+Honduras,hap,0.0,0.024,0,0.46,0.72,esposizione sempre sopra la finestra italiana
+Hungary,hap,0.0,0.024,0,0.18,0.33,esposizione sempre sopra la finestra italiana
+India,hap,0.0,0.024,0,0.6,0.86,esposizione sempre sopra la finestra italiana
+Indonesia,hap,0.0,0.024,0,0.23,0.67,esposizione sempre sopra la finestra italiana
+Jamaica,hap,0.0,0.024,0,0.09,0.49,esposizione sempre sopra la finestra italiana
+Kazakhstan,hap,0.0,0.024,0,0.07,0.3,esposizione sempre sopra la finestra italiana
+Kenya,hap,0.0,0.024,0,0.86,0.91,esposizione sempre sopra la finestra italiana
+Kiribati,hap,0.0,0.024,0,0.41,0.91,esposizione sempre sopra la finestra italiana
+Kyrgyzstan,hap,0.0,0.024,0,0.22,0.43,esposizione sempre sopra la finestra italiana
+Lao People's Democratic Republic,hap,0.0,0.024,0,0.94,0.99,esposizione sempre sopra la finestra italiana
+Latvia,hap,0.0,0.024,0,0.12,0.26,esposizione sempre sopra la finestra italiana
+Lesotho,hap,0.0,0.024,0,0.53,0.66,esposizione sempre sopra la finestra italiana
+Liberia,hap,0.0,0.024,0,0.96,0.99,esposizione sempre sopra la finestra italiana
+Lithuania,hap,0.0,0.024,0,0.03,0.09,esposizione sempre sopra la finestra italiana
+Madagascar,hap,0.0,0.024,0,0.99,0.99,esposizione sempre sopra la finestra italiana
+Malawi,hap,0.0,0.024,0,0.97,0.99,esposizione sempre sopra la finestra italiana
+Maldives,hap,0.0,0.024,0,0.1,0.77,esposizione sempre sopra la finestra italiana
+Mali,hap,0.0,0.024,0,0.98,0.99,esposizione sempre sopra la finestra italiana
+Marshall Islands,hap,0.0,0.024,0,0.25,0.34,esposizione sempre sopra la finestra italiana
+Mauritania,hap,0.0,0.024,0,0.49,0.85,esposizione sempre sopra la finestra italiana
+Mexico,hap,0.0,0.024,0,0.12,0.27,esposizione sempre sopra la finestra italiana
+Micronesia (Federated States of),hap,0.0,0.024,0,0.26,0.63,esposizione sempre sopra la finestra italiana
+Mongolia,hap,0.0,0.024,0,0.46,0.73,esposizione sempre sopra la finestra italiana
+Montenegro,hap,0.0,0.024,0,0.36,0.58,esposizione sempre sopra la finestra italiana
+Mozambique,hap,0.0,0.024,0,0.96,0.99,esposizione sempre sopra la finestra italiana
+Myanmar,hap,0.0,0.024,0,0.8,0.96,esposizione sempre sopra la finestra italiana
+Namibia,hap,0.0,0.024,0,0.5,0.8,esposizione sempre sopra la finestra italiana
+Nauru,hap,0.0,0.024,0,0.04,0.16,esposizione sempre sopra la finestra italiana
+Nepal,hap,0.0,0.024,0,0.67,0.88,esposizione sempre sopra la finestra italiana
+Nicaragua,hap,0.0,0.024,0,0.41,0.76,esposizione sempre sopra la finestra italiana
+Niger,hap,0.0,0.024,0,0.98,0.99,esposizione sempre sopra la finestra italiana
+Nigeria,hap,0.0,0.024,0,0.74,0.93,esposizione sempre sopra la finestra italiana
+Niue,hap,0.0,0.024,0,0.05,0.29,esposizione sempre sopra la finestra italiana
+North Macedonia,hap,0.0,0.024,0,0.19,0.52,esposizione sempre sopra la finestra italiana
+Northern Mariana Islands,hap,0.0,0.024,0,0.09,0.18,esposizione sempre sopra la finestra italiana
+Pakistan,hap,0.0,0.024,0,0.5,0.83,esposizione sempre sopra la finestra italiana
+Panama,hap,0.0,0.024,0,0.08,0.3,esposizione sempre sopra la finestra italiana
+Papua New Guinea,hap,0.0,0.024,0,0.88,0.94,esposizione sempre sopra la finestra italiana
+Paraguay,hap,0.0,0.024,0,0.29,0.64,esposizione sempre sopra la finestra italiana
+Peru,hap,0.0,0.024,0,0.16,0.6,esposizione sempre sopra la finestra italiana
+Philippines,hap,0.0,0.024,0,0.46,0.68,esposizione sempre sopra la finestra italiana
+Poland,hap,0.0,0.024,0,0.13,0.3,esposizione sempre sopra la finestra italiana
+Republic of Moldova,hap,0.0,0.024,0,0.06,0.46,esposizione sempre sopra la finestra italiana
+Romania,hap,0.0,0.024,0,0.12,0.37,esposizione sempre sopra la finestra italiana
+Rwanda,hap,0.0,0.024,0,0.99,1.0,esposizione sempre sopra la finestra italiana
+Saint Lucia,hap,0.0,0.024,0,0.04,0.3,esposizione sempre sopra la finestra italiana
+Saint Vincent and the Grenadines,hap,0.0,0.024,0,0.03,0.23,esposizione sempre sopra la finestra italiana
+Samoa,hap,0.0,0.024,0,0.57,0.78,esposizione sempre sopra la finestra italiana
+Sao Tome and Principe,hap,0.0,0.024,0,0.39,0.93,esposizione sempre sopra la finestra italiana
+Senegal,hap,0.0,0.024,0,0.64,0.84,esposizione sempre sopra la finestra italiana
+Serbia,hap,0.0,0.024,0,0.23,0.62,esposizione sempre sopra la finestra italiana
+Sierra Leone,hap,0.0,0.024,0,0.96,0.98,esposizione sempre sopra la finestra italiana
+Slovenia,hap,0.0,0.024,0,0.08,0.21,esposizione sempre sopra la finestra italiana
+Solomon Islands,hap,0.0,0.024,0,0.89,0.97,esposizione sempre sopra la finestra italiana
+Somalia,hap,0.0,0.024,0,0.97,0.99,esposizione sempre sopra la finestra italiana
+South Africa,hap,0.0,0.024,0,0.12,0.47,esposizione sempre sopra la finestra italiana
+South Sudan,hap,0.0,0.024,0,0.99,1.0,esposizione sempre sopra la finestra italiana
+Sri Lanka,hap,0.0,0.024,0,0.6,0.86,esposizione sempre sopra la finestra italiana
+Sudan,hap,0.0,0.024,0,0.35,0.88,esposizione sempre sopra la finestra italiana
+Suriname,hap,0.0,0.024,0,0.08,0.31,esposizione sempre sopra la finestra italiana
+Taiwan (Province of China),hap,0.0,0.024,0,0.12,0.54,esposizione sempre sopra la finestra italiana
+Tajikistan,hap,0.0,0.024,0,0.24,0.65,esposizione sempre sopra la finestra italiana
+Thailand,hap,0.0,0.024,0,0.18,0.65,esposizione sempre sopra la finestra italiana
+Timor-Leste,hap,0.0,0.024,0,0.82,0.96,esposizione sempre sopra la finestra italiana
+Togo,hap,0.0,0.024,0,0.9,0.98,esposizione sempre sopra la finestra italiana
+Tonga,hap,0.0,0.024,0,0.33,0.7,esposizione sempre sopra la finestra italiana
+Tuvalu,hap,0.0,0.024,0,0.08,0.51,esposizione sempre sopra la finestra italiana
+Uganda,hap,0.0,0.024,0,0.98,0.99,esposizione sempre sopra la finestra italiana
+Ukraine,hap,0.0,0.024,0,0.03,0.09,esposizione sempre sopra la finestra italiana
+United Republic of Tanzania,hap,0.0,0.024,0,0.97,0.99,esposizione sempre sopra la finestra italiana
+Uruguay,hap,0.0,0.024,0,0.03,0.09,esposizione sempre sopra la finestra italiana
+Uzbekistan,hap,0.0,0.024,0,0.1,0.25,esposizione sempre sopra la finestra italiana
+Vanuatu,hap,0.0,0.024,0,0.85,0.94,esposizione sempre sopra la finestra italiana
+Viet Nam,hap,0.0,0.024,0,0.35,0.93,esposizione sempre sopra la finestra italiana
+Yemen,hap,0.0,0.024,0,0.19,0.59,esposizione sempre sopra la finestra italiana
+Zambia,hap,0.0,0.024,0,0.83,0.88,esposizione sempre sopra la finestra italiana
+Zimbabwe,hap,0.0,0.024,0,0.68,0.81,esposizione sempre sopra la finestra italiana
+Argentina,hap,0.0,0.024,2,0.02,0.1,troppo poche righe nella finestra (meno di 8)
+Bermuda,hap,0.0,0.024,5,0.02,0.07,troppo poche righe nella finestra (meno di 8)
+Brunei Darussalam,hap,0.0,0.024,5,0.02,0.17,troppo poche righe nella finestra (meno di 8)
+Grenada,hap,0.0,0.024,5,0.02,0.25,troppo poche righe nella finestra (meno di 8)
+Morocco,hap,0.0,0.024,2,0.02,0.17,troppo poche righe nella finestra (meno di 8)
+Russian Federation,hap,0.0,0.024,5,0.02,0.07,troppo poche righe nella finestra (meno di 8)
+Saint Kitts and Nevis,hap,0.0,0.024,5,0.02,0.09,troppo poche righe nella finestra (meno di 8)

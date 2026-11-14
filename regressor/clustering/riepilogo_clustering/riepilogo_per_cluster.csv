@@ -1,0 +1,13 @@
+cluster,inquinante,n_paesi,offset_medio,pendenza_media,dispersione_media,distanza_media_da_italia,fattore_burden_medio_vs_globale,contiene_italia,esempi_piu_vicini_all_italia
+0,pm25,51,-0.34,0.18,0.099,2.032,0.711,True,Italy; Switzerland; Austria; Netherlands; Belgium; France
+1,pm25,56,0.354,0.105,0.097,3.112,1.425,False,Colombia; Greece; Mongolia; Congo; Cuba; Angola
+2,pm25,26,-0.088,-0.433,0.206,4.235,0.916,False,Japan; Sao Tome and Principe; Vanuatu; Lao People's Democratic Republic; Zambia; Burundi
+0,no2,10,-1.159,-0.355,0.229,6.286,0.314,False,Niue; Tokelau; Tonga; Samoa; Cabo Verde; Monaco
+1,no2,78,-0.061,-0.005,0.055,1.965,0.941,True,Italy; Tajikistan; Lithuania; Uzbekistan; Mongolia; Armenia
+2,no2,26,0.61,0.141,0.112,4.738,1.84,False,Portugal; Philippines; United Arab Emirates; Barbados; Norway; Bahamas
+0,ozone,42,-0.363,-0.12,0.106,1.718,0.696,True,Italy; Israel; Malta; Switzerland; Slovakia; Czechia
+1,ozone,16,1.081,-0.211,0.139,4.492,2.948,False,Republic of Moldova; Angola; Kazakhstan; Northern Mariana Islands; Bahrain; Ukraine
+2,ozone,12,-0.029,0.397,0.264,2.426,0.971,False,Georgia; Albania; Slovenia; Bulgaria; Cyprus; Egypt
+0,hap,48,-0.487,-0.398,0.241,1.414,0.614,True,Italy; New Zealand; Japan; Bahrain; Kuwait; Austria
+1,hap,6,2.49,0.193,0.713,9.641,12.062,False,Jordan; Tokelau; Syrian Arab Republic; Egypt; Palestine; Turkmenistan
+2,hap,11,1.121,0.307,0.373,5.332,3.069,False,Palau; Venezuela (Bolivarian Republic of); Malaysia; Trinidad and Tobago; Iran (Islamic Republic of); Lebanon
