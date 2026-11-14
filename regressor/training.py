@@ -83,6 +83,12 @@ def to_original(y_log):
     """Riporta in scala originale: e^(y_log) - 1."""
     return np.expm1(y_log)
 
+def load_excluded_similarity(path: Path, groups_to_drop: list) -> dict:
+    """Da country_similarity.csv"""
+    t = pd.read_csv(path, usecols=["Country", "pollutant", "group"])
+    t = t[t["group"].isin(groups_to_drop)]
+    return {p: set(g["Country"]) for p, g in t.groupby("pollutant")}
+
 def select_lambda(X, y, groups, monotone, n_basis, lambdas, n_splits, seed) -> float:
     """CV interna per nazione: sceglie lam con MSE minimo in scala log."""
     inner = make_splitter(n_splits, seed)
@@ -160,10 +166,27 @@ def plot_curves(data: dict, scale: str, out: Path, variants: list) -> None:
 def main(a) -> None:
     lambdas = np.array([float(v) for v in a.lambdas.split(",")])
     variants = a.variants
+
+    # Carico eventuali nazioni da escludere
+    excluded = {}
+    if a.similarity_csv:
+        excluded = load_excluded_similarity(a.similarity_csv, a.drop_groups)
+
     all_rows, plot_data = [], {}
     for p, _ in POLLUTANTS:
         df = pd.read_csv(a.data_dir / f"{p}.csv")
         df[TARGET_LOG] = np.log1p(df[TARGET])
+
+        # Escludo eventuali nazioni
+        drop = excluded.get(p, set())
+        if drop:
+            assert not (drop - set(df[GROUP])), f"{p}: paesi da escludere non presenti nel dataset"
+            assert "Italy" not in drop, "L'Italia non puo' essere esclusa"
+            n_rows, n_countries = len(df), df[GROUP].nunique()
+            df = df[~df[GROUP].isin(drop)].reset_index(drop=True)
+            print(f"{p}: esclusi {len(drop)} paesi ({n_rows - len(df)} righe); "
+                f"restano {df[GROUP].nunique()} paesi su {n_countries} ({len(df)} righe)")
+        
         sub = df[[GROUP, FEATURE, TARGET, TARGET_LOG] + (["Units"] if "Units" in df else [])]
 
         models = {}
@@ -201,6 +224,10 @@ if __name__ == "__main__":
     ap.add_argument("--variants", nargs="+", choices=list(VARIANTS), default=["free", "monotone"])
     ap.add_argument("--n-basis", type=int, default=12, help="numero di funzioni di base della spline")
     ap.add_argument("--lambdas", default="0.01,0.1,1,10,100,1000,10000,100000", help="griglia del parametro di lisciamento")
+    ap.add_argument("--similarity-csv", type=Path, default=Path("clustering/country_similarity.csv"),
+                help="country_similarity.csv (colonne Country, pollutant, group)")
+    ap.add_argument("--drop-groups", nargs="+", default=["non confrontabili", "distanti"],
+                help="valori di 'group' da eliminare")
     ap.add_argument("--n-splits", type=int, default=5)
     ap.add_argument("--seed", type=int, default=42)
     main(ap.parse_args())
