@@ -60,7 +60,6 @@ volumes:
   keycloak_db_data:
 
 networks:
-  # Unica rete esterna, condivisa con gli altri servizi della tua app.
-  # Va creata una volta sola a mano:  docker network create app-net
+  # Unica rete esterna, condivisa con gli altri servizi dell'app
   auth_net:
     external: true
