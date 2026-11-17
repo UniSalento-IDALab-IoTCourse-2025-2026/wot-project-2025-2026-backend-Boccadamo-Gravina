@@ -1,0 +1,63 @@
+name: auth_service
+
+services:
+  keycloak-db:
+    image: postgres:16
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${KC_DB_NAME}
+      POSTGRES_USER: ${KC_DB_USERNAME}
+      POSTGRES_PASSWORD: ${KC_DB_PASSWORD}
+    volumes:
+      - keycloak_db_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U ${KC_DB_USERNAME} -d ${KC_DB_NAME}"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+    # Nessuna "networks": usa solo la rete di default del progetto (implicita
+    # e privata), quindi gli altri servizi non possono raggiungere il database.
+
+  keycloak:
+    image: quay.io/keycloak/keycloak:${KEYCLOAK_VERSION}
+    restart: unless-stopped
+    # start-dev: HTTP senza TLS per lo sviluppo.
+    # --import-realm: importa i .json presenti in keycloak/import/
+    command: start-dev --import-realm
+    depends_on:
+      keycloak-db:
+        condition: service_healthy
+    environment:
+      KC_DB: postgres
+      KC_DB_URL: jdbc:postgresql://keycloak-db:5432/${KC_DB_NAME}
+      KC_DB_USERNAME: ${KC_DB_USERNAME}
+      KC_DB_PASSWORD: ${KC_DB_PASSWORD}
+
+      # Utente admin iniziale usato solo al primo avvio, a database vuoto
+      KC_BOOTSTRAP_ADMIN_USERNAME: ${KC_BOOTSTRAP_ADMIN_USERNAME}
+      KC_BOOTSTRAP_ADMIN_PASSWORD: ${KC_BOOTSTRAP_ADMIN_PASSWORD}
+
+      # URL pubblico di Keycloak (quello del browser)
+      KC_HOSTNAME: ${KC_HOSTNAME}
+
+      # Permette agli altri servizi di raggiungerlo come http://keycloak:8080
+      # per scaricare le chiavi JWKS, senza cambiare l'issuer nei token.
+      KC_HOSTNAME_BACKCHANNEL_DYNAMIC: "true"
+      KC_HEALTH_ENABLED: "true"
+    ports:
+      # Solo su localhost: non raggiungibile da altre macchine.
+      - "127.0.0.1:8080:8080"   # host_port:container_port
+    volumes:
+      - ./keycloak/import:/opt/keycloak/data/import:ro
+    networks:
+      - default     # per parlare con keycloak-db
+      - auth_net    # per essere raggiunto dagli altri servizi
+
+volumes:
+  keycloak_db_data:
+
+networks:
+  # Unica rete esterna, condivisa con gli altri servizi della tua app.
+  # Va creata una volta sola a mano:  docker network create app-net
+  auth_net:
+    external: true
