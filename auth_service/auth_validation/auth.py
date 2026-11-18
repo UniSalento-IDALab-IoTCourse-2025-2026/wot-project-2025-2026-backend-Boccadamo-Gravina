@@ -72,3 +72,14 @@ def validate_token(token: str) -> dict:
     except jwt.PyJWTError as exc:
         logger.info("Token rifiutato: %s", type(exc).__name__)
         raise InvalidToken() from exc
+
+def build_user(claims: dict) -> CurrentUser:
+    realm_access = claims.get("realm_access") or {}
+    roles = realm_access.get("roles") or []
+    return CurrentUser(
+        id=claims["sub"],
+        username=claims.get("preferred_username"),
+        email=claims.get("email"),
+        roles=frozenset(roles),
+        claims=claims,
+    )
