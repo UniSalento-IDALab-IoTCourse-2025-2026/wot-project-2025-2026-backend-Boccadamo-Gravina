@@ -83,3 +83,5 @@ def build_user(claims: dict) -> CurrentUser:
         roles=frozenset(roles),
         claims=claims,
     )
+
+    # TODO: controllo tipo token e aud
