@@ -1,5 +1,8 @@
 import os
 from dataclasses import dataclass, field
+import logging
+import jwt
+from jwt import PyJWKClient
 
 def _required_env(name: str) -> str:
     value = os.environ.get(name, "").strip()
@@ -48,4 +51,24 @@ LEEWAY_SECONDS = 10
 # Claims che devono essere presenti nel JWT, altrimenti il JWT non è valido
 REQUIRED_CLAIMS = ["exp", "iss", "aud", "sub"]
 
+logger = logging.getLogger("auth")
+_jwks_client = PyJWKClient(JWKS_URL, timeout=5)
 
+def validate_token(token: str) -> dict:
+    try:
+        signing_key = _jwks_client.get_signing_key_from_jwt(token)
+        return jwt.decode(
+            token,
+            signing_key.key,
+            algorithms=ALGORITHMS,
+            audience=AUDIENCE,
+            issuer=ISSUER,
+            leeway=LEEWAY_SECONDS,
+            options={"require": REQUIRED_CLAIMS},
+        )
+    except jwt.PyJWKClientConnectionError as exc:
+        logger.error("JWKS non raggiungibile: %s", type(exc).__name__)
+        raise AuthServiceUnavailable() from exc
+    except jwt.PyJWTError as exc:
+        logger.info("Token rifiutato: %s", type(exc).__name__)
+        raise InvalidToken() from exc
