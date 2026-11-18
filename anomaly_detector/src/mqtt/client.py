@@ -1,12 +1,11 @@
 import json
 import logging
-import time
 from paho.mqtt.enums import CallbackAPIVersion
 import paho.mqtt.client as mqtt
 import config
 
 def create_mqtt_client(detector):
-    client = mqtt.Client(CallbackAPIVersion.VERSION2, client_id="anomaly-detector-service")
+    client = mqtt.Client(CallbackAPIVersion.VERSION2, config.MQTT_CLIENT_ID)
 
     if config.MQTT_USERNAME and config.MQTT_PASSWORD:
         client.username_pw_set(config.MQTT_USERNAME, config.MQTT_PASSWORD)

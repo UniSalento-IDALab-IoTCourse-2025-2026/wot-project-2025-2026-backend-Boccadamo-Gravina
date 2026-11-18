@@ -1,0 +1,37 @@
+services:
+  redis-status:
+    image: redis:7-alpine
+    container_name: redis-status
+    command: redis-server --appendonly yes
+    volumes:
+      - redis_status_data:/data
+
+  sensors-status:
+    build: .
+    container_name: sensors-status
+    ports:
+      - "${SENSORS_STATUS_PORT:-8002}:8000"
+    environment:
+      - MQTT_BROKER=${MQTT_BROKER}
+      - MQTT_PORT=${MQTT_PORT}
+      - MQTT_USERNAME=${MQTT_BACKEND_SERVICE_USER}
+      - MQTT_PASSWORD=${MQTT_BACKEND_SERVICE_PASS}
+      - MQTT_CLIENT_ID=sensor-status-service
+      - MQTT_TOPIC_STATUS=${MQTT_TOPIC_STATUS}
+      - REDIS_HOST=redis-status
+      - REDIS_PORT=6379
+      - OIDC_JWKS_URL=${OIDC_JWKS_URL}
+      - OIDC_ISSUER=${OIDC_ISSUER}
+      - OIDC_AUDIENCE=${SENSORS_STATUS_AUDIENCE}
+    depends_on:
+      - redis-status
+    networks:
+      - iot-network
+      - default
+
+networks:
+  iot-network:
+    external: true
+
+volumes:
+  redis_status_data:
