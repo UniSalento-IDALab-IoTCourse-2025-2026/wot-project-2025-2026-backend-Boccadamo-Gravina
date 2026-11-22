@@ -49,7 +49,7 @@ ALGORITHMS = ["RS256"]
 LEEWAY_SECONDS = 10
 
 # Claims che devono essere presenti nel JWT, altrimenti il JWT non è valido
-REQUIRED_CLAIMS = ["exp", "iss", "aud", "sub"]
+REQUIRED_CLAIMS = ["exp", "iss", "sub"]
 
 logger = logging.getLogger("auth")
 _jwks_client = PyJWKClient(JWKS_URL, timeout=5)
@@ -61,10 +61,10 @@ def validate_token(token: str) -> dict:
             token,
             signing_key.key,
             algorithms=ALGORITHMS,
-            audience=AUDIENCE,
+            # audience=AUDIENCE,
             issuer=ISSUER,
             leeway=LEEWAY_SECONDS,
-            options={"require": REQUIRED_CLAIMS},
+            options={"require": REQUIRED_CLAIMS, "verify_aud": False},
         )
     except jwt.PyJWKClientConnectionError as exc:
         logger.error("JWKS non raggiungibile: %s", type(exc).__name__)
