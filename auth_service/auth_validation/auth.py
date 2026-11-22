@@ -108,6 +108,9 @@ def current_user(
     if credentials is None:
         raise _unauthorized()
     try:
+        # credentials.credentials è il token JWT vero e proprio
+        # Il JWT infatti non è altro che tutta la stringa credentials.credentials,
+        # che poi al suo interno contiene header, payload e firma, separati da punti
         claims = validate_token(credentials.credentials)
     except InvalidToken:
         raise _unauthorized()
