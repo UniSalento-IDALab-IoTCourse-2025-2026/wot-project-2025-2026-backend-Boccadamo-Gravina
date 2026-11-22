@@ -3,6 +3,8 @@ from dataclasses import dataclass, field
 import logging
 import jwt
 from jwt import PyJWKClient
+from fastapi import Depends, HTTPException, status
+from fastapi.security import HTTPAuthorizationCredentials, HTTPBearer
 
 def _required_env(name: str) -> str:
     value = os.environ.get(name, "").strip()
@@ -57,6 +59,8 @@ _jwks_client = PyJWKClient(JWKS_URL, timeout=5)
 def validate_token(token: str) -> dict:
     try:
         signing_key = _jwks_client.get_signing_key_from_jwt(token)
+
+        # Questo è il payload del JWT
         return jwt.decode(
             token,
             signing_key.key,
@@ -84,4 +88,48 @@ def build_user(claims: dict) -> CurrentUser:
         claims=claims,
     )
 
-    # TODO: controllo tipo token e aud
+# Consente a FastAPI di estrarre autonomamente il token che arriva
+# da una richiesta, tramite l'header Authorization
+# Il JWT è a tutti gli effetti il valore della riga Authorization,
+# che poi è l'header della richiesta HTTP che FastAPI riceve
+_bearer = HTTPBearer(auto_error=False)
+
+def _unauthorized() -> HTTPException:
+    return HTTPException(
+        status_code=status.HTTP_401_UNAUTHORIZED,
+        detail="Token non valido o mancante",
+        headers={"WWW-Authenticate": "Bearer"},
+    )
+
+# Verifica token e credenziali
+def current_user(
+    credentials: HTTPAuthorizationCredentials | None = Depends(_bearer),
+) -> CurrentUser:
+    if credentials is None:
+        raise _unauthorized()
+    try:
+        claims = validate_token(credentials.credentials)
+    except InvalidToken:
+        raise _unauthorized()
+    except AuthServiceUnavailable:
+        raise HTTPException(
+            status_code=status.HTTP_503_SERVICE_UNAVAILABLE,
+            detail="Servizio di autenticazione non disponibile",
+        )
+    return build_user(claims)
+
+# Funzione che genera un checker per il ruolo specifico passato
+def require_role(role: str):
+    def checker(user: CurrentUser = Depends(current_user)) -> CurrentUser:
+        if not user.has_role(role):
+            logger.info("Accesso negato: utente=%s ruolo_richiesto=%s", user.id, role)
+            raise HTTPException(
+                status_code=status.HTTP_403_FORBIDDEN,
+                detail="Permesso negato",
+            )
+        return user
+    return checker
+
+# Scorciatoie per ruoli
+require_admin = require_role("admin")
+require_citizen = require_role("citizen")
