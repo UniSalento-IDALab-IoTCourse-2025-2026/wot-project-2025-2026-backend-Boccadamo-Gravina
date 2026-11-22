@@ -54,12 +54,12 @@ services:
       - ./keycloak/import:/opt/keycloak/data/import:ro
     networks:
       - default     # per parlare con keycloak-db
-      - auth_net    # per essere raggiunto dagli altri servizi
+      - iot-network    # per essere raggiunto dagli altri servizi
 
 volumes:
   keycloak_db_data:
 
 networks:
   # Unica rete esterna, condivisa con gli altri servizi dell'app
-  auth_net:
+  iot-network:
     external: true

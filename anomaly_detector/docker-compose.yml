@@ -8,6 +8,7 @@ services:
       - MQTT_PORT=1883
       - MQTT_USERNAME=${MQTT_BACKEND_SERVICE_USER}
       - MQTT_PASSWORD=${MQTT_BACKEND_SERVICE_PASS}
+      - MQTT_CLIENT_ID=anomaly-detector-service
       - MQTT_TOPIC_INPUT=telemetry/air_quality
       - MQTT_TOPIC_ANOMALY=telemetry/anomalies
       - EWMA_ALPHA=0.1
