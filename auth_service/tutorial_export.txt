@@ -1,0 +1,9 @@
+creare il file nel container:
+    docker exec auth_service-keycloak-1 \
+            /opt/keycloak/bin/kc.sh export \
+            --realm onehealth_realm \
+            --dir /opt/keycloak/data/export \
+            --users realm_file
+
+copiare il file ottenuto in locale:
+    docker cp <id>>:/opt/keycloak/data/export/onehealth_realm-realm.json ./realm-export.json
