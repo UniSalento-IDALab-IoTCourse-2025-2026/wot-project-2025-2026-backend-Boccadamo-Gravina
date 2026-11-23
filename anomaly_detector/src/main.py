@@ -6,13 +6,14 @@ import threading
 import config
 from models.detector import OnlineAnomalyDetector
 from storage.state_manager import JSONStateManager
+from services.anomaly_service import AnomalyDetectionService
 from mqtt.client import MqttClientManager
 from mqtt.publisher import MqttAnomalyPublisher
 from mqtt.listener import MqttTelemetryListener
 
 logging.basicConfig(
     level=logging.INFO,
-    format="%(asctime)s [%(levelname)s] %(message)s"
+    format="%(asctime)s [%(levelname)s] %(name)s: %(message)s"
 )
 
 logger = logging.getLogger(__name__)
@@ -31,21 +32,30 @@ def main():
 
     logger.info("Avvio Anomaly Detection Service...")
 
-    # Inizializzazione logica di dominio
-    state_manager = JSONStateManager(filepath=config.STATE_FILE_PATH)
+    # Infrastruttura & Storage
+    repository = JSONStateManager(filepath=config.STATE_FILE_PATH)
+    mqtt_manager = MqttClientManager()
+    publisher = MqttAnomalyPublisher(mqtt_manager.client)
+
+    # Dominio
     detector = OnlineAnomalyDetector(
         alpha=config.ALPHA,
         warmup_samples=config.WARMUP_SAMPLES,
         z_threshold=config.Z_THRESHOLD,
-        state_manager=state_manager
+        initial_state=repository.load_state(), # Meglio passare lo stato invece dell'intero manager
     )
 
-    # Inizializzazione infrastruttura MQTT e componenti (Dependency Injection)
-    mqtt_manager = MqttClientManager()
-    publisher = MqttAnomalyPublisher(mqtt_manager.client)
-    MqttTelemetryListener(mqtt_manager.client, detector, publisher)
+    # Application Service
+    service = AnomalyDetectionService(
+        detector=detector,
+        state_manager=repository,
+        publisher=publisher,
+    )
 
-    # Avvio connessione e ciclo di vita del servizio
+    # Entrypoint (Listener)
+    MqttTelemetryListener(client=mqtt_manager.client, service=service)
+
+    # Ciclo di vita del servizio
     if mqtt_manager.connect_with_retry(shutdown_event):
         mqtt_manager.start_loop()
         try:

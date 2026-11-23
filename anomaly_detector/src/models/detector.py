@@ -1,25 +1,23 @@
 from models.ewma import EWMAOnlineStats
-from storage.state_manager import JSONStateManager
 
 class OnlineAnomalyDetector:
-    def __init__(self, alpha: float, warmup_samples: int, z_threshold: float, state_manager: JSONStateManager):
+    def __init__(self, alpha: float, warmup_samples: int, z_threshold: float, initial_state: dict | None = None):
         self.alpha = alpha
         self.warmup_samples = warmup_samples
         self.z_threshold = z_threshold
-        self.state_manager = state_manager
         
         # Mappa: "device_id:pollutant" -> EWMAOnlineStats
-        self.stats = {}
-        self._load_from_storage()
+        self.stats: dict[str, EWMAOnlineStats] = {}
+        if initial_state:
+            self.load_state(initial_state)
 
-    def _load_from_storage(self):
-        raw_state = self.state_manager.load_state()
+
+    def load_state(self, raw_state: dict) -> None:
         for key, data in raw_state.items():
             self.stats[key] = EWMAOnlineStats.from_dict(data)
 
-    def _persist(self):
-        serialized = {key: st.to_dict() for key, st in self.stats.items()}
-        self.state_manager.save_state(serialized)
+    def dump_state(self) -> dict:
+        return {key: st.to_dict() for key, st in self.stats.items()}
 
     def process_reading(self, device_id: str, pollutant: str, value: float) -> dict:
         key = f"{device_id}:{pollutant}"
@@ -38,14 +36,11 @@ class OnlineAnomalyDetector:
         # Aggiorna lo stato EWMA
         st.update(value)
 
-        # Persistenza ad ogni aggiornamento
-        self._persist()
-
         return {
             "value": value,
             "mean": round(st.mean, 2),
             "std_dev": round(st.std_dev, 2),
             "z_score": round(z_score, 2),
             "is_anomaly": is_anomaly,
-            "status": "learning" if st.count <= self.warmup_samples else ("ANOMALY" if is_anomaly else "NORMAL")
+            "status": "learning" if st.count <= self.warmup_samples else ("ANOMALY" if is_anomaly else "NORMAL"),
         }
