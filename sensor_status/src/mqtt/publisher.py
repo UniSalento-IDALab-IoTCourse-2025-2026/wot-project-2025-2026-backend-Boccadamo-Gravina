@@ -12,7 +12,7 @@ class MqttLocationPublisher:
         self._client = client
 
     def publish_location(self, device_id: str, lat: float, lon: float, updated_at: str) -> str:
-        topic = f"{config.TOPIC_LOCATION}/{device_id}"
+        topic = f"{config.TOPIC_LOCATION}"
         payload = {
             "device_id": device_id,
             "lat": lat,
