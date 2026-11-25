@@ -18,6 +18,7 @@ services:
       - MQTT_PASSWORD=${MQTT_BACKEND_SERVICE_PASS}
       - MQTT_CLIENT_ID=sensor-status-service
       - MQTT_TOPIC_STATUS=${MQTT_TOPIC_STATUS}
+      - MQTT_TOPIC_LOCATION=${MQTT_TOPIC_LOCATION}
       - REDIS_HOST=redis-status
       - REDIS_PORT=6379
       - OIDC_JWKS_URL=${OIDC_JWKS_URL}

@@ -12,7 +12,7 @@ MQTT_USERNAME = _required_env("MQTT_USERNAME")
 MQTT_PASSWORD = _required_env("MQTT_PASSWORD")
 MQTT_CLIENT_ID = _required_env("MQTT_CLIENT_ID")
 TOPIC_STATUS = _required_env("MQTT_TOPIC_STATUS")
-
+TOPIC_LOCATION = _required_env("MQTT_TOPIC_LOCATION")
 
 REDIS_HOST = _required_env("REDIS_HOST")
 REDIS_PORT = int(_required_env("REDIS_PORT"))
