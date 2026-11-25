@@ -3,6 +3,8 @@ services:
   anomaly-detector:
     build: .
     container_name: anomaly_detector
+    ports:
+      - "${ANOMALY_DETECTOR_PORT:-8003}:8000"
     environment:
       - MQTT_BROKER=mqtt-broker
       - MQTT_PORT=1883
@@ -15,6 +17,9 @@ services:
       - WARMUP_SAMPLES=15
       - Z_THRESHOLD=2.5
       - STATE_FILE_PATH=/app/data/state.json
+      - OIDC_JWKS_URL=${OIDC_JWKS_URL}
+      - OIDC_ISSUER=${OIDC_ISSUER}
+      - OIDC_AUDIENCE=${ANOMALY_DETECTOR_AUDIENCE}
     volumes:
       - anomaly_data:/app/data
     networks:

@@ -19,6 +19,13 @@ class OnlineAnomalyDetector:
     def dump_state(self) -> dict:
         return {key: st.to_dict() for key, st in self.stats.items()}
 
+    def reset_device(self, device_id: str) -> int:
+        prefix = f"{device_id}:"
+        keys_to_remove = [k for k in self.stats if k.startswith(prefix)]
+        for k in keys_to_remove:
+            del self.stats[k]
+        return len(keys_to_remove)
+
     def process_reading(self, device_id: str, pollutant: str, value: float) -> dict:
         key = f"{device_id}:{pollutant}"
         if key not in self.stats:

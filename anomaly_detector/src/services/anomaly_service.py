@@ -1,4 +1,5 @@
 import logging
+import threading
 from models.detector import OnlineAnomalyDetector
 from storage.state_manager import JSONStateManager
 from mqtt.publisher import MqttAnomalyPublisher
@@ -16,7 +17,7 @@ class AnomalyDetectionService:
         self._detector = detector
         self._state_manager = state_manager
         self._publisher = publisher
-        self._publisher = publisher
+        self._lock = threading.Lock()
 
     def evaluate_device_telemetry(self, device_id: str, timestamp: str, sensors: dict[str, float]) -> None:
         if not sensors:
@@ -25,14 +26,15 @@ class AnomalyDetectionService:
         anomalies_detected = {}
         analysis_summary = {}
 
-        for pollutant, val in sensors.items():
-            res = self._detector.process_reading(device_id, pollutant, float(val))
-            analysis_summary[pollutant] = res
-            if res["is_anomaly"]:
-                anomalies_detected[pollutant] = res
+        with self._lock:
+            for pollutant, val in sensors.items():
+                res = self._detector.process_reading(device_id, pollutant, float(val))
+                analysis_summary[pollutant] = res
+                if res["is_anomaly"]:
+                    anomalies_detected[pollutant] = res
 
-        # Persistenza singola per l'intero batch di sensori
-        self._state_manager.save_state(self._detector.dump_state())
+            # Persistenza singola per l'intero batch di sensori
+            self._state_manager.save_state(self._detector.dump_state())
 
         logger.info(
             f"[{device_id}] Campionamento elaborato. Stato: "
@@ -41,3 +43,11 @@ class AnomalyDetectionService:
 
         if anomalies_detected:
             self._publisher.publish_anomaly(device_id, timestamp, anomalies_detected)
+
+    def reset_device_memory(self, device_id: str) -> int:
+        with self._lock:
+            removed = self._detector.reset_device(device_id)
+            if removed > 0:
+                self._state_manager.save_state(self._detector.dump_state())
+                logger.info(f"[{device_id}] Memoria resettata ({removed} chiavi rimosse).")
+            return removed

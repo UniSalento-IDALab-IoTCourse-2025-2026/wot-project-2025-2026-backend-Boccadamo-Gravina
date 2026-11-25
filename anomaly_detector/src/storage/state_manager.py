@@ -30,3 +30,15 @@ class JSONStateManager:
             os.replace(temp_file, self.filepath)
         except Exception as e:
             logging.error(f"Errore durante il salvataggio dello stato su JSON: {e}")
+
+    def delete_key(self, key: str) -> bool:
+        """Elimina una chiave dallo stato e salva il file. Restituisce True se rimossa."""
+        state = self.load_state()
+        if key not in state:
+            logging.info(f"Chiave '{key}' non trovata in '{self.filepath}'. Nessuna modifica.")
+            return False
+
+        del state[key]
+        self.save_state(state)
+        logging.info(f"Chiave '{key}' eliminata da '{self.filepath}'.")
+        return True
