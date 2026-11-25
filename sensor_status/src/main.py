@@ -5,6 +5,7 @@ from fastapi import FastAPI
 
 from api.sensor_router import router as sensor_router
 from mqtt.client import MqttClientManager
+from mqtt.publisher import MqttLocationPublisher
 from mqtt.listener import MqttStatusListener
 from storage.sensor_repository import SensorRepository
 from services.sensor_service import SensorService
@@ -19,8 +20,16 @@ logging.basicConfig(
 async def lifespan(app: FastAPI):
     shutdown_event = threading.Event()
 
+    repository = SensorRepository()
     mqtt_manager = MqttClientManager()
-    service = SensorService(SensorRepository())
+    publisher = MqttLocationPublisher(mqtt_manager.client)
+
+    service = SensorService(
+        repository=repository,
+        publisher=publisher,
+    )
+    app.state.sensor_service = service
+
     MqttStatusListener(client=mqtt_manager.client, service=service)
 
     # Avvia il retry in background così FastAPI si avvia subito senza bloccarsi

@@ -14,3 +14,6 @@ class SensorStatus:
     firmware_version: str | None = None
     sensors_health: dict[str, str] | None = None
     offline_reason: str | None = None       # Valorizzato solo quando è down (es. "unexpected_disconnection")
+    lat: float | None = None
+    lon: float | None = None
+    location_updated_at: str | None = None
