@@ -1,0 +1,46 @@
+services:
+  timescaledb:
+    image: timescale/timescaledb:latest-pg16
+    container_name: timescaledb
+    environment:
+      - POSTGRES_USER=${TIMESCALE_USER}
+      - POSTGRES_PASSWORD=${TIMESCALE_PASSWORD}
+      - POSTGRES_DB=${TIMESCALE_DB}
+    volumes:
+      - timescale_data:/var/lib/postgresql/data
+    networks:
+      - iot-network
+
+  data-service:
+    build: .
+    container_name: data-service
+    ports:
+      - "${DATA_SERVICE_PORT:-8004}:8000" # host_port:container_port
+    environment:
+      - MQTT_BROKER=${MQTT_BROKER}
+      - MQTT_PORT=${MQTT_PORT}
+      - MQTT_USERNAME=${MQTT_BACKEND_SERVICE_USER}
+      - MQTT_PASSWORD=${MQTT_BACKEND_SERVICE_PASS}
+      - MQTT_CLIENT_ID=data-service
+      - MQTT_TOPIC_TELEMETRY=${MQTT_TOPIC_TELEMETRY}
+      - MQTT_TOPIC_LOCATION=${MQTT_TOPIC_LOCATION}
+      - TIMESCALE_HOST=timescaledb
+      - TIMESCALE_PORT=5432
+      - TIMESCALE_USER=${TIMESCALE_USER}
+      - TIMESCALE_PASSWORD=${TIMESCALE_PASSWORD}
+      - TIMESCALE_DB=${TIMESCALE_DB}
+      - OIDC_JWKS_URL=${OIDC_JWKS_URL}
+      - OIDC_ISSUER=${OIDC_ISSUER}
+      - OIDC_AUDIENCE=${DATA_SERVICE_AUDIENCE}
+    depends_on:
+      - timescaledb
+    networks:
+      - iot-network
+    restart: on-failure
+
+networks:
+  iot-network:
+    external: true
+
+volumes:
+  timescale_data:
