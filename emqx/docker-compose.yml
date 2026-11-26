@@ -3,6 +3,7 @@ services:
   mqtt-broker:
     image: emqx/emqx:5.8.8
     container_name: emqx_broker
+    init: true
     ports:
       - "1883:1883"     # Porta MQTT standard (senza TLS)
       - "8083:8083"     # Porta WebSocket (per test da client dashboard)
