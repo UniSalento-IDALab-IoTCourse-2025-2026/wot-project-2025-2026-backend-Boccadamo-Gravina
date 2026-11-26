@@ -31,6 +31,7 @@ class MqttDataListener:
     # Decodifica il payload JSON e chiama il metodo appropriato di DataService per gestire i dati ricevuti,
     # quindi per fare tipo salvataggio nel db o upsert posizione
     def _on_message(self, client, userdata, msg):
+        
         try:
             payload = json.loads(msg.payload.decode("utf-8"))
 
