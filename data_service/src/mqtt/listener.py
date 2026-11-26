@@ -3,8 +3,27 @@ import logging
 import paho.mqtt.client as mqtt
 import config
 from services.data_service import DataService
+import re
 
 logger = logging.getLogger(__name__)
+
+
+def match_mqtt_topic(pattern: str, topic: str) -> dict[str, str] | None:
+    """
+    Verifica se `topic` rispetta `pattern` (con wildcard `+`)
+    e restituisce i segmenti catturati, oppure None se non matcha.
+    """
+    parts = pattern.split("/")
+    regex_parts = []
+    for i, part in enumerate(parts):
+        if part == "+":
+            regex_parts.append(f"(?P<w_{i}>[^/]+)")
+        else:
+            regex_parts.append(re.escape(part))
+
+    regex = "^" + "/".join(regex_parts) + "$"
+    match = re.match(regex, topic)
+    return match.groupdict() if match else None
 
 class MqttDataListener:
     def __init__(self, client: mqtt.Client, service: DataService):
@@ -34,9 +53,9 @@ class MqttDataListener:
         try:
             payload = json.loads(msg.payload.decode("utf-8"))
 
-            if msg.topic == config.MQTT_TOPIC_TELEMETRY:
+            if match_mqtt_topic(config.MQTT_TOPIC_TELEMETRY, msg.topic):
                 self._service.handle_telemetry(payload)
-            elif msg.topic == config.MQTT_TOPIC_LOCATION:
+            elif match_mqtt_topic(config.MQTT_TOPIC_LOCATION, msg.topic):
                 self._service.handle_location(payload)
             else:
                 logger.warning(f"Messaggio ricevuto su topic inatteso: {msg.topic}")
