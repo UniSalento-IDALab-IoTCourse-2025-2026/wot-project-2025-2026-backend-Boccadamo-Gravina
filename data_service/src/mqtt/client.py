@@ -2,7 +2,6 @@ import logging
 import threading
 from paho.mqtt.enums import CallbackAPIVersion
 import paho.mqtt.client as mqtt
-
 import config
 
 logger = logging.getLogger(__name__)
