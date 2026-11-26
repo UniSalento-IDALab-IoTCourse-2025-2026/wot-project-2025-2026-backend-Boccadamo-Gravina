@@ -5,7 +5,7 @@ MQTT_PORT = int(os.getenv("MQTT_PORT", 1883))
 MQTT_USERNAME = os.getenv("MQTT_USERNAME", None)
 MQTT_PASSWORD = os.getenv("MQTT_PASSWORD", None)
 MQTT_CLIENT_ID = os.getenv("MQTT_CLIENT_ID", None)
-TOPIC_INPUT = os.getenv("MQTT_TOPIC_INPUT", "telemetry/air_quality")
+TOPIC_INPUT = os.getenv("MQTT_TOPIC_INPUT", "telemetry/+/air_quality")
 TOPIC_ANOMALY = os.getenv("MQTT_TOPIC_ANOMALY", "telemetry/anomalies")
 
 # Parametri EWMA / Anomaly Detection
