@@ -23,8 +23,9 @@ class MqttStatusListener:
 
     def _on_message(self, client, userdata, msg):
         try:
+            # Topic atteso: sensors/<device_id>/status
             parts = msg.topic.split("/")
-            topic_device_id = parts[1] if len(parts) >= 2 else "unknown_device"
+            topic_device_id = parts[1] if len(parts) >= 3 else "unknown_device"
             payload_raw = msg.payload.decode("utf-8")
 
             updated = self._service.update_from_mqtt(topic_device_id, payload_raw)

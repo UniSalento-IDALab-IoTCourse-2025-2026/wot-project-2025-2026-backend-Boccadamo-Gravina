@@ -11,8 +11,8 @@ services:
       - MQTT_USERNAME=${MQTT_BACKEND_SERVICE_USER}
       - MQTT_PASSWORD=${MQTT_BACKEND_SERVICE_PASS}
       - MQTT_CLIENT_ID=anomaly-detector-service
-      - MQTT_TOPIC_INPUT=telemetry/air_quality
-      - MQTT_TOPIC_ANOMALY=telemetry/anomalies
+      - MQTT_TOPIC_INPUT=${MQTT_TOPIC_INPUT}
+      - MQTT_TOPIC_ANOMALY=${MQTT_TOPIC_ANOMALY}
       - EWMA_ALPHA=0.1
       - WARMUP_SAMPLES=15
       - Z_THRESHOLD=2.5
