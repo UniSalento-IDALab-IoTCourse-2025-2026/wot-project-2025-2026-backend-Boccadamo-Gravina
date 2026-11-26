@@ -1,0 +1,5 @@
+fastapi
+uvicorn
+pyjwt[crypto]
+paho-mqtt>=2.0.0
+psycopg2-binary
